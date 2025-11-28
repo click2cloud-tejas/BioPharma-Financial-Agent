@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from financial_engine.engine import process_financial_query
-from financial_engine.performance import revenue_performance_by_month
+
 from dotenv import load_dotenv
 import os
 from flask import send_from_directory
@@ -89,13 +89,7 @@ def ask():
         }), 500
 
 
-@app.route("/api/revenue-performance", methods=["POST"])
-def revenue_performance_month_route():
-    data = request.json
-    month = data.get("month")   # e.g. "2021-05" or "May 2021"
 
-    result = revenue_performance_by_month(month)
-    return jsonify(result)
 
 
 @app.route("/chart/<filename>")
