@@ -1,0 +1,11 @@
+pandas
+matplotlib
+openai
+python-dotenv
+azure-core
+azure-identity
+numpy
+pillow
+openpyxl
+
+
